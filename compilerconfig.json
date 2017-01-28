@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "assets/global.css",
+    "inputFile": "assets/global.scss"
+  },
+  {
+    "outputFile": "app/dashboard/components/dashboard/dashboard.component.css",
+    "inputFile": "app/dashboard/components/dashboard/dashboard.component.scss"
+  },
+  {
+    "outputFile": "app/heroes/components/hero-detail/hero-detail.component.css",
+    "inputFile": "app/heroes/components/hero-detail/hero-detail.component.scss"
+  },
+  {
+    "outputFile": "app/heroes/components/hero-search/hero-search.component.css",
+    "inputFile": "app/heroes/components/hero-search/hero-search.component.scss"
+  },
+  {
+    "outputFile": "app/heroes/components/heroes/heroes.component.css",
+    "inputFile": "app/heroes/components/heroes/heroes.component.scss"
+  },
+  {
+    "outputFile": "app/app.component.css",
+    "inputFile": "app/app.component.scss"
+  }
+]

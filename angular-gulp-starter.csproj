@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{D181F1B6-4E62-4869-9E1C-73BB9F0DAAB7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.component.css">
+      <DependentUpon>app.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\dashboard\components\dashboard\dashboard.component.css">
+      <DependentUpon>dashboard.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\dashboard\components\dashboard\dashboard.component.html" />
+    <Content Include="app\heroes\components\hero-detail\hero-detail.component.css">
+      <DependentUpon>hero-detail.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\heroes\components\hero-detail\hero-detail.component.html" />
+    <Content Include="app\heroes\components\hero-search\hero-search.component.css">
+      <DependentUpon>hero-search.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\heroes\components\hero-search\hero-search.component.html" />
+    <Content Include="app\heroes\components\heroes\heroes.component.css">
+      <DependentUpon>heroes.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\heroes\components\heroes\heroes.component.html" />
+    <Content Include="assets\global.scss" />
+    <Content Include="build-tools\systemjs-config.js" />
+    <Content Include="index.html" />
+    <Content Include="LICENSE" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tsconfig.ngc.json" />
+    <Content Include="tsconfig.prod.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="assets\done.png" />
+    <Content Include="assets\gif-load.gif" />
+    <Content Include="assets\global.css" />
+    <Content Include="build-tools\build-scripts\bundling.js" />
+    <Content Include="build-tools\build-scripts\compilation.js" />
+    <Content Include="build-tools\build-scripts\path-tools.js" />
+    <Content Include="build-tools\express-http-server.dev.js" />
+    <Content Include="build-tools\express-http-server.prod.js" />
+    <Content Include="build-tools\rollup-config.js" />
+    <Content Include="build-tools\variables.js" />
+    <Content Include="build.common.js" />
+    <Content Include="build.dev.js" />
+    <Content Include="build.prod.js" />
+    <Content Include="gulpfile.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\app-routing.module.ts" />
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\dashboard\components\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="app\dashboard\dashboard-routing.module.ts" />
+    <TypeScriptCompile Include="app\dashboard\dashboard.module.ts" />
+    <TypeScriptCompile Include="app\heroes\components\hero-detail\hero-detail.component.ts" />
+    <TypeScriptCompile Include="app\heroes\components\hero-search\hero-search.component.ts" />
+    <TypeScriptCompile Include="app\heroes\components\heroes\heroes.component.ts" />
+    <TypeScriptCompile Include="app\heroes\heroes-routing.module.ts" />
+    <TypeScriptCompile Include="app\heroes\heroes.module.ts" />
+    <TypeScriptCompile Include="app\heroes\components\hero-search\hero-search.service.ts" />
+    <TypeScriptCompile Include="app\heroes\services\hero.service.ts" />
+    <TypeScriptCompile Include="app\heroes\services\mock-heroes.ts" />
+    <TypeScriptCompile Include="app\main-aot.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\models\hero.ts" />
+    <TypeScriptCompile Include="app\rxjs-extensions.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.component.scss" />
+    <Content Include="app\dashboard\components\dashboard\dashboard.component.scss" />
+    <Content Include="app\heroes\components\hero-detail\hero-detail.component.scss" />
+    <Content Include="app\heroes\components\hero-search\hero-search.component.scss" />
+    <Content Include="app\heroes\components\heroes\heroes.component.scss" />
+    <Content Include="build-tools\tsconfig.rxjs-to-es6.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1853</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1853/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

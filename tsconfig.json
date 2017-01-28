@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noEmitHelpers":  true,
+    "lib": ["es6", "dom"]
+  },
+  "include": [
+     "app/**/*.ts"
+  ],
+  "exclude": [
+     "app/main-aot.ts"
+  ],
+  "compileOnSave": true
+}

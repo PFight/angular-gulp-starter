@@ -1,0 +1,15 @@
+node_modules
+dist-dev
+temp
+app-aot
+app/**/*.js
+app/**/*.js.map
+app/**/*.css
+app/**/*.metadata.json
+npm-debug.log
+typings
+obj
+bin
+dist
+.vs
+rxjs-es

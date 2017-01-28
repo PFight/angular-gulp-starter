@@ -12,13 +12,13 @@ Simple dev/prod gulp build for Angular (2+) using systemjs, rollup, ngc (AOT), s
     
     gulp build-dev --color
 
-Deveopment build includes compilation of SCSS and typescript, and bundling of rxjs to single file.
+Development build includes compilation of SCSS and TypeScript, and bundling of rxjs to single file.
 
 ##### Production build
 
     gulp build-prod --color
 
-Productin build includes compilation of SCSS, AOT compilation and tree-shaking with Rollup. All result files moved to `dist` dir. Production build output do not conflicts with development.
+Production build includes compilation of SCSS, AOT compilation and tree-shaking with Rollup. All result files moved to `dist` dir. Production build output do not conflicts with development.
 
 ##### Start develoment server
 
@@ -30,7 +30,7 @@ Server will be listening on [http://localhost:8181](http://localhost:8181).
     
     npm run start-prod
 
-Server will be listening on [http://localhost:8181](http://localhost:8282), with gzip content compression enabled.
+Server will be listening on [http://localhost:8282](http://localhost:8282), with gzip content compression enabled.
 
 ### Using Visual Studio
 
@@ -49,10 +49,10 @@ To force recompilation of all files make rebuild of the solution (Alt+B, Alt+R).
 
 ### Installing dependencies
 
-If library should be imported via `import` statement into typescript, then:
+If library should be imported via `import` statement into TypeScript, then:
 
-1. For development: make sure, that SystemJS will find this lib by `buid-tools/systemjs-config.json`. In some cases nothing needed, in some cases you should map library name to its path, as it made for @angular modules.
-2. For production: make sure, that Rollup will find this lib by `build-tools/rollup-config.js`. In most cases, `rollup-plugin-node-resolve` plugin will make the work without any setup.
+1. For development: make sure, that TypeScript will find this library with `tsconfig.json`, and make sure, that SystemJS will find it by `buid-tools/systemjs-config.json`. In some cases nothing needed, in some cases you should map library name to its path, as it made for @angular modules.
+2. For production: make sure, that TypeScript will find this library with `tsconfig.ngc.json`, `tsconfig.prod.json` and make sure, that Rollup will find it by `build-tools/rollup-config.js`. In most cases, `rollup-plugin-node-resolve` plugin will make the work without any setup.
 
 If library should not be imported, and its only needed to add it page, then:
 

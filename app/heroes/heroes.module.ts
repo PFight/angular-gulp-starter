@@ -7,10 +7,10 @@ import { HttpModule }    from '@angular/http';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
 
-import { HeroesComponent }      from './components/heroes/heroes.component';
-import { HeroDetailComponent }  from './components/hero-detail/hero-detail.component';;
-import { HeroService }          from './services/hero.service';
-import { HeroSearchComponent }  from './components/hero-search/hero-search.component';
+import { HeroesComponent } from './heroes.component/heroes.component';
+import { HeroDetailComponent } from './hero-detail.component/hero-detail.component';
+import { HeroSearchComponent } from './hero-search.component/hero-search.component';
+import { HeroService } from './services/hero.service';
 
 @NgModule({
   imports: [
@@ -25,7 +25,6 @@ import { HeroSearchComponent }  from './components/hero-search/hero-search.compo
     HeroSearchComponent
   ],
   providers: [ HeroService ],
-  bootstrap: [],
   exports: [ HeroSearchComponent ]
 })
 export class HeroesModule { }

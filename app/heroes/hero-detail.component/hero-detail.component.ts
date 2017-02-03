@@ -3,22 +3,23 @@ import { Component, OnInit }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 
-import { Hero }         from '../../../models/hero';
-import { HeroService }  from '../../services/hero.service';
+import { Models } from '../heroes-imports';
+import { HeroService } from '../services/hero.service';
+
 @Component({
   moduleId: module.id,
   selector: 'my-hero-detail',
   templateUrl: 'hero-detail.component.html',
-  styleUrls: [ 'hero-detail.component.css' ]
+  styleUrls: ['hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-  hero: Hero;
+  hero: Models.Hero;
 
   constructor(
     private heroService: HeroService,
     private route: ActivatedRoute,
     private location: Location
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.params
@@ -30,7 +31,6 @@ export class HeroDetailComponent implements OnInit {
     this.location.back();
   }
 }
-
 
 /*
 Copyright 2016 Google Inc. All Rights Reserved.

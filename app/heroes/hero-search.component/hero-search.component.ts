@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import * as Core from '@angular/core';
 import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
 
 import { HeroSearchService } from './hero-search.service';
-import { Hero } from '../../../models/hero';
+import { Models } from '../heroes-imports';
 
-@Component({
+@Core.Component({
   moduleId: module.id,
   selector: 'hero-search',
   templateUrl: 'hero-search.component.html',
   styleUrls: [ 'hero-search.component.css' ],
   providers: [HeroSearchService]
 })
-export class HeroSearchComponent implements OnInit {
-  heroes: Observable<Hero[]>;
+export class HeroSearchComponent implements Core.OnInit {
+  heroes: Observable<Models.Hero[]>;
   private searchTerms = new Subject<string>();
 
   constructor(
@@ -34,15 +34,15 @@ export class HeroSearchComponent implements OnInit {
         // return the http search observable
         ? this.heroSearchService.search(term)
         // or the observable of empty heroes if no search term
-        : Observable.of<Hero[]>([]))
+        : Observable.of<Models.Hero[]>([]))
       .catch(error => {
         // TODO: real error handling
         console.log(error);
-        return Observable.of<Hero[]>([]);
+        return Observable.of<Models.Hero[]>([]);
       });
   }
 
-  gotoDetail(hero: Hero): void {
+  gotoDetail(hero: Models.Hero): void {
     let link = ['/detail', hero.id];
     this.router.navigate(link);
   }

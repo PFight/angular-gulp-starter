@@ -66,4 +66,5 @@ If library should not be imported, and its only needed to add it page, then:
 3. Resolve, why `packageConfigPaths` in systemjs-config does not work.
 4. Add server-side rendering support.
 5. Add testing support.
+6. Remove unused dependencies.
 

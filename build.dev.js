@@ -31,7 +31,7 @@ build.rxjsBundle = function (context) {
 
     // Bundle it to the one file
     var bundleName = "rxjs.js";
-    var bundle = bundling.rollupPackages(bundleName, packagesMap, {},
+    var bundle = bundling.rollupPackages(bundleName, packagesMap, { format: "cjs" },
         { destDir: context.destDir, cache: true, uglify: false });
     return bundle.stream;
 }

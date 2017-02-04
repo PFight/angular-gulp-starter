@@ -58,3 +58,12 @@ If library should not be imported, and its only needed to add it page, then:
 
 1. For devleopment: add `<script>` tag into `index.html` in section `<!-- development -->`.
 2. For production: add row to `build.prod.js` to function `commonBundle`; you can specify full path, or use `pathTools.resolvePackagePath` funciton to automaticly resolve library path.
+
+### Known issues
+
+1. Replace es6-shim with core-js, because es6-shim works extremely slow in IE.
+2. Add minification and post-processing of CSS.
+3. Resolve, why `packageConfigPaths` in systemjs-config does not work.
+4. Add server-side rendering support.
+5. Add testing support.
+

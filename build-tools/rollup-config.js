@@ -16,7 +16,7 @@ const rollupNG2 = () => new RollupNG2();
 module.exports = {
   sourceMap: false,
   treeshake: true,
-  format: 'cjs',
+  format: 'iife',
   context: 'window',
   plugins: [
     rollupNG2(),

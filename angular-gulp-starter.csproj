@@ -32,22 +32,22 @@
     <Content Include="app\app.component.css">
       <DependentUpon>app.component.scss</DependentUpon>
     </Content>
-    <Content Include="app\dashboard\components\dashboard\dashboard.component.css">
+    <Content Include="app\dashboard\dashboard.component\dashboard.component.css">
       <DependentUpon>dashboard.component.scss</DependentUpon>
     </Content>
-    <Content Include="app\dashboard\components\dashboard\dashboard.component.html" />
-    <Content Include="app\heroes\components\hero-detail\hero-detail.component.css">
+    <Content Include="app\dashboard\dashboard.component\dashboard.component.html" />
+    <Content Include="app\heroes\hero-detail.component\hero-detail.component.css">
       <DependentUpon>hero-detail.component.scss</DependentUpon>
     </Content>
-    <Content Include="app\heroes\components\hero-detail\hero-detail.component.html" />
-    <Content Include="app\heroes\components\hero-search\hero-search.component.css">
+    <Content Include="app\heroes\hero-detail.component\hero-detail.component.html" />
+    <Content Include="app\heroes\hero-search.component\hero-search.component.css">
       <DependentUpon>hero-search.component.scss</DependentUpon>
     </Content>
-    <Content Include="app\heroes\components\hero-search\hero-search.component.html" />
-    <Content Include="app\heroes\components\heroes\heroes.component.css">
+    <Content Include="app\heroes\hero-search.component\hero-search.component.html" />
+    <Content Include="app\heroes\heroes.component\heroes.component.css">
       <DependentUpon>heroes.component.scss</DependentUpon>
     </Content>
-    <Content Include="app\heroes\components\heroes\heroes.component.html" />
+    <Content Include="app\heroes\heroes.component\heroes.component.html" />
     <Content Include="assets\global.scss" />
     <Content Include="build-tools\systemjs-config.js" />
     <Content Include="index.html" />
@@ -79,28 +79,33 @@
     <TypeScriptCompile Include="app\app-routing.module.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\dashboard\components\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="app\dashboard\dashboard.component\dashboard.component.ts" />
+    <TypeScriptCompile Include="app\dashboard\dashboard-exports.ts" />
+    <TypeScriptCompile Include="app\dashboard\dashboard-imports.ts" />
     <TypeScriptCompile Include="app\dashboard\dashboard-routing.module.ts" />
     <TypeScriptCompile Include="app\dashboard\dashboard.module.ts" />
-    <TypeScriptCompile Include="app\heroes\components\hero-detail\hero-detail.component.ts" />
-    <TypeScriptCompile Include="app\heroes\components\hero-search\hero-search.component.ts" />
-    <TypeScriptCompile Include="app\heroes\components\heroes\heroes.component.ts" />
+    <TypeScriptCompile Include="app\heroes\hero-detail.component\hero-detail.component.ts" />
+    <TypeScriptCompile Include="app\heroes\hero-search.component\hero-search.component.ts" />
+    <TypeScriptCompile Include="app\heroes\heroes.component\heroes.component.ts" />
+    <TypeScriptCompile Include="app\heroes\heroes-imports.ts" />
     <TypeScriptCompile Include="app\heroes\heroes-routing.module.ts" />
     <TypeScriptCompile Include="app\heroes\heroes.module.ts" />
-    <TypeScriptCompile Include="app\heroes\components\hero-search\hero-search.service.ts" />
+    <TypeScriptCompile Include="app\heroes\hero-search.component\hero-search.service.ts" />
+    <TypeScriptCompile Include="app\heroes\heroes-exports.ts" />
     <TypeScriptCompile Include="app\heroes\services\hero.service.ts" />
     <TypeScriptCompile Include="app\heroes\services\mock-heroes.ts" />
     <TypeScriptCompile Include="app\main-aot.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\models\hero.ts" />
+    <TypeScriptCompile Include="app\models\models-exports.ts" />
     <TypeScriptCompile Include="app\rxjs-extensions.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.component.scss" />
-    <Content Include="app\dashboard\components\dashboard\dashboard.component.scss" />
-    <Content Include="app\heroes\components\hero-detail\hero-detail.component.scss" />
-    <Content Include="app\heroes\components\hero-search\hero-search.component.scss" />
-    <Content Include="app\heroes\components\heroes\heroes.component.scss" />
+    <Content Include="app\dashboard\dashboard.component\dashboard.component.scss" />
+    <Content Include="app\heroes\hero-detail.component\hero-detail.component.scss" />
+    <Content Include="app\heroes\hero-search.component\hero-search.component.scss" />
+    <Content Include="app\heroes\heroes.component\heroes.component.scss" />
     <Content Include="build-tools\tsconfig.rxjs-to-es6.json" />
   </ItemGroup>
   <ItemGroup>

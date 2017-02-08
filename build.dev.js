@@ -46,7 +46,8 @@ build.bundle = function(context) {
 build.compile = function(context) {
     return es.merge([
         compilation.compileTypescript(conf.TSCONFIG, conf.APP_DIR),
-        compilation.compileSass(conf.APP_DIR)
+        compilation.compileSass(conf.APP_DIR),
+		compilation.compileSass(conf.ASSETS_DIR)
     ]);
 }
 

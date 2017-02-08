@@ -1,11 +1,11 @@
-﻿.test-app .app-loading {
+.test-app .app-loading {
   text-align: center;
   margin-top: 100px;
   font-style: italic;
   color: gray;
   line-height: 20px; }
   .test-app .app-loading .loading-icon {
-    background-image: url("gif-load.gif");
+    background-image: url("./gif-load.gif");
     width: 20px;
     height: 20px;
     background-size: 20px 20px;
@@ -116,4 +116,3 @@ Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */
-

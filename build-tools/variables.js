@@ -18,5 +18,6 @@ conf.TSCONFIG = root + "tsconfig.json";
 conf.DIST_DEV_DIR = root + "./dist-dev";
 conf.DIST_DIR = root + "./dist";
 conf.AOT_DIR = root + "app-aot";
+conf.ASSETS_DIR = root + "assets"
 
 module.exports = conf;

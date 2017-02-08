@@ -43,7 +43,7 @@ Server will be listening on [http://localhost:8282](http://localhost:8282), with
 
 ##### Working
 
-TypeScript and SCSS set up to be compiled on file save. SystemJS loads every file separately, so you only need save your changes, and reload browser window with cache disabled (`Dev Tools -> Network -> Disable cache checkbox` in Chorme).
+TypeScript and SCSS set up to be compiled on file save. SystemJS loads every file separately, so you only need save your changes, and reload browser window.
 
 To force recompilation of all files make rebuild of the solution (Alt+B, Alt+R). To force recompilation of SCSS file, `right click -> Web Compiler -> Re-compile file`
 

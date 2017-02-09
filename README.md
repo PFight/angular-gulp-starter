@@ -74,3 +74,8 @@ If library should not be imported, and its only needed to add it page, then:
 5. Add testing support.
 6. Remove unused dependencies.
 
+### See also
+
+See branch hash-routing for enabling hash location strategy, instead of HTML5.
+See branch http2 for testing spdy in development server. By the way, there is no perfomance boost achieved.
+

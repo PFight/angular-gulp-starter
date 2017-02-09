@@ -6,6 +6,12 @@ Simple dev/prod gulp build for Angular (2+) using systemjs, rollup, ngc (AOT), s
     npm install gulp -g
     npm install
 
+### See in action
+
+[Try DEV build online](https://pfight.github.io/angular-gulp-starter-online-dev/)
+
+[Try PROD build online](https://pfight.github.io/angular-gulp-starter-online-prod)
+
 ### Commands
 
 ##### Development buid

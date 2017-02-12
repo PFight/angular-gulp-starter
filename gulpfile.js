@@ -3,9 +3,13 @@ var vars = require('./variables.js');
 var api = require('angular-gulp-starter-api');
 
 gulp.task("build-dev", function(){
-    return api.async(
-        () => api.dev.processStyles(vars),
-        () => api.dev.processScripts(vars)
+    return api.sync(
+        () => api.dev.prepareImportModules(vars),
+        () => api.async(
+            () => api.dev.prepareIncludeScripts(vars),
+            () => api.dev.processStyles(vars),
+            () => api.dev.processScripts(vars)
+        )
     );
 });
 

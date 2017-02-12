@@ -1,5 +1,4 @@
 node_modules
-dist-dev
 temp
 app-aot
 app/**/*.js
@@ -12,4 +11,4 @@ obj
 bin
 dist
 .vs
-rxjs-es
+external-libs

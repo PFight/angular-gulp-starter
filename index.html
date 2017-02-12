@@ -15,15 +15,12 @@
     </my-app>
   
   <!-- dev -->
-    <script src="node_modules\zone.js\dist\zone.js"></script>
-    <script src="node_modules\reflect-metadata\Reflect.js"></script>
-    <script src="node_modules\es6-shim\es6-shim.js"></script>
-    <script src="node_modules\tslib\tslib.js"></script>
+    <script src="external-libs/common.js"></script>
 
     <script src="node_modules/systemjs/dist/system.js"></script>
     <script src="systemjs-config.js"></script>
     <script>
-        System.import('angular-gulp-starter-api/rxjs').then(function () {
+        System.import('external-libs/imports').then(function () {
             System.import('app/main');
         });
     </script>

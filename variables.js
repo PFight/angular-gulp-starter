@@ -1,4 +1,5 @@
 var nodePath = require('path');
+var api = require('angular-gulp-starter-api');
 
 var conf = {};
 
@@ -19,6 +20,29 @@ conf.INDEX_HTML = nodePath.join(root, "index.html");
 // 
 
 conf.TSCONFIG = nodePath.join(root, "tsconfig.json");
+
+conf.LIBS_DIR = nodePath.join(root, "external-libs");
+
+conf.INCLUDE_SCRIPTS = [
+    api.pathTools.resolvePackagePath("zone.js"),
+    api.pathTools.resolvePackagePath("reflect-metadata"),
+    api.pathTools.resolvePackagePath("es6-shim"),
+    api.pathTools.resolvePackagePath("tslib")
+];
+conf.INCLUDE_SCRIPTS_BUNDLE_NAME = "common.js";
+
+conf.IMPORT_MODULES = [
+    api.libs.rxjs.getImportModules(),
+    "@angular/common",
+    "@angular/core",
+    "@angular/http",
+    "@angular/compiler",
+    "@angular/platform-browser-dynamic",
+    "@angular/platform-browser",
+    "@angular/router",
+    "@angular/forms"
+];
+conf.IMPORT_MODULES_ENTRY_NAME = "imports.js";
 
 // =======================================================
 // Production build variables

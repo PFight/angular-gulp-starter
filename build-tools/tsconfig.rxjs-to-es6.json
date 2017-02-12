@@ -1,8 +1,0 @@
-{
-    "compilerOptions": {
-        "target": "es6",
-        "module": "es6",
-        "moduleResolution": "node"
-    },
-    "include": [ "../node_modules/rxjs/src/**/*.ts" ]
-}

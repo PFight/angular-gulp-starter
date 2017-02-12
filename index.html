@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <base href="./" />
-    <link type="text/css" rel="stylesheet" href="assets/global.css">
+    <link type="text/css" rel="stylesheet" href="app/global-assets/global.css">
 </head>
 <body>
     <my-app class="test-app">
@@ -21,9 +21,9 @@
     <script src="node_modules\tslib\tslib.js"></script>
 
     <script src="node_modules/systemjs/dist/system.js"></script>
-    <script src="build-tools/systemjs-config.js"></script>
+    <script src="systemjs-config.js"></script>
     <script>
-        System.import('dist-dev/rxjs.js').then(function () {
+        System.import('angular-gulp-starter-api/rxjs').then(function () {
             System.import('app/main');
         });
     </script>
@@ -34,8 +34,8 @@
     <script>
         var module = {};
     </script>
-    <script src="common.min.js"></script>
-    <script src="app.min.js"></script>
+    <script src="app/common.min.js"></script>
+    <script src="app/app.min.js"></script>
 
    -- end-prod -->
 </body>

@@ -16,6 +16,7 @@
     "@angular/compiler-cli": "^2.1.2",
     "@angular/platform-server": "^2.1.0",
     "@types/node": "^6.0.46",
+    "angular-gulp-starter-api": "^1.0.0-alha.1",
     "browser-resolve": "^1.11.2",
     "compression": "^1.6.2",
     "del": "^2.2.2",

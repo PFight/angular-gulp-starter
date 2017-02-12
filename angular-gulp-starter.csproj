@@ -49,30 +49,22 @@
     </Content>
     <Content Include="app\heroes\heroes.component\heroes.component.html" />
     <Content Include="assets\global.scss" />
-    <Content Include="build-tools\systemjs-config.js" />
     <Content Include="index.html" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="rollup-config.js" />
+    <Content Include="systemjs-config.js" />
     <Content Include="tsconfig.json" />
     <Content Include="tsconfig.ngc.json" />
     <Content Include="tsconfig.prod.json" />
+    <Content Include="variables.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="assets\done.png" />
     <Content Include="assets\gif-load.gif" />
     <Content Include="assets\global.css" />
-    <Content Include="build-tools\build-scripts\bundling.js" />
-    <Content Include="build-tools\build-scripts\compilation.js" />
-    <Content Include="build-tools\build-scripts\path-tools.js" />
-    <Content Include="build-tools\express-http-server.dev.js" />
-    <Content Include="build-tools\express-http-server.prod.js" />
-    <Content Include="build-tools\rollup-config.js" />
-    <Content Include="build-tools\variables.js" />
-    <Content Include="build.common.js" />
-    <Content Include="build.dev.js" />
-    <Content Include="build.prod.js" />
     <Content Include="gulpfile.js" />
   </ItemGroup>
   <ItemGroup>
@@ -106,7 +98,6 @@
     <Content Include="app\heroes\hero-detail.component\hero-detail.component.scss" />
     <Content Include="app\heroes\hero-search.component\hero-search.component.scss" />
     <Content Include="app\heroes\heroes.component\heroes.component.scss" />
-    <Content Include="build-tools\tsconfig.rxjs-to-es6.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="compilerconfig.json" />

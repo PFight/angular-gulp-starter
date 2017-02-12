@@ -1,52 +1,46 @@
 var gulp = require('gulp');
-var runSequence = require('run-sequence');
-
-var conf = require('./build-tools/variables.js');
-var dev = require('./build.dev.js');
-var prod = require('./build.prod.js');
-
-var devContext = {
-    destDir: conf.DIST_DEV_DIR,
-    indexHtmlPath: "index.html"
-};
-
-var prodContext = {
-    destDir: conf.DIST_DIR,
-    indexHtmlPath: "index.html"
-};
-
-gulp.task("bundle-dev", function(){
-    return dev.bundle(devContext);
-});
-
-gulp.task("compile-dev", function(){
-    return dev.compile(devContext);
-});
+var vars = require('./variables.js');
+var api = require('angular-gulp-starter-api');
 
 gulp.task("build-dev", function(){
-    return dev.build(devContext);
+    return api.async(
+        () => api.dev.processStyles(vars),
+        () => api.dev.processScripts(vars)
+    );
 });
 
 gulp.task('clean-dev', function () {
-    return dev.clean(devContext);
-});
-
-gulp.task("bundle-prod", function(){
-    return prod.bundle(prodContext);
-});
-
-gulp.task("compile-prod", function(){
-    return prod.compile(prodContext);
+    return api.dev.clean(vars);
 });
 
 gulp.task("build-prod", function(){
-    return prod.build(prodContext);
+    return api.sync(
+        () => api.prod.clean(vars),
+        () => api.async(
+            () => api.prod.makeCommonBundle(vars),
+            () => api.sync(                
+                () => api.prod.processStyles(vars),
+                () => api.prod.processAngularTemplates(vars),
+                () => api.prod.processScripts(vars),
+                () => api.prod.makeAppBundle(vars)
+            )
+        ),
+        () => api.prod.publishToDist(vars)
+    );
 });
 
 gulp.task('clean-prod', function () {
-    return prod.clean(prodContext);
+    return api.prod.clean(vars);
 });
 
 gulp.task('clean', function(callback) {
   runSequence('clean-prod', 'clean-dev', callback);
+});
+
+gulp.task('serve-dev', function (callback) {
+    api.devServer.run();
+});
+
+gulp.task('serve-prod', function (callback) {
+    api.prodServer.run();
 });

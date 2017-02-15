@@ -23,13 +23,14 @@ conf.TSCONFIG = nodePath.join(root, "tsconfig.json");
 
 conf.LIBS_DIR = nodePath.join(root, "external-libs");
 
-conf.INCLUDE_SCRIPTS = [
+conf.INJECT_SCRIPTS_DEV = [
     api.pathTools.resolvePackagePath("zone.js"),
     api.pathTools.resolvePackagePath("reflect-metadata"),
     api.pathTools.resolvePackagePath("es6-shim"),
-    api.pathTools.resolvePackagePath("tslib")
+    api.pathTools.resolvePackagePath("tslib"),
+    "node_modules/systemjs/dist/system.js",
+    "systemjs-config.js"
 ];
-conf.INCLUDE_SCRIPTS_BUNDLE_NAME = "common.js";
 
 conf.IMPORT_MODULES = [
     api.libs.rxjs.getImportModules(),
@@ -64,5 +65,17 @@ conf.ROLLUP_CONFIG = nodePath.join(root, "rollup-config.js");
 conf.DIST_DIR = nodePath.join(root, "dist");
 conf.APP_BUNDLE_NAME = "app.min.js";
 conf.COMMON_BUNDLE_NAME = "common.min.js";
+conf.COMMON_BUNDLE_SCRIPTS = [
+    api.prod.moduleFixScriptPath,
+    api.pathTools.resolvePackagePath("zone.js"),
+    api.pathTools.resolvePackagePath("reflect-metadata"),
+    api.pathTools.resolvePackagePath("es6-shim"),
+    api.pathTools.resolvePackagePath("tslib")
+];
+conf.INJECT_SCRIPTS_PROD = [
+    nodePath.join(conf.DIST_DIR, conf.APP_DIR_NAME, conf.COMMON_BUNDLE_NAME),
+    nodePath.join(conf.DIST_DIR, conf.APP_DIR_NAME, conf.APP_BUNDLE_NAME)    
+];
+
 
 module.exports = conf;

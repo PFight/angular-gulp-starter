@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,12 +13,17 @@
             <div class="loading-text"> Loading...</div>
         </div>
     </my-app>
-  
-  <!-- dev -->
-    <script src="external-libs/common.js"></script>
 
-    <script src="node_modules/systemjs/dist/system.js"></script>
-    <script src="systemjs-config.js"></script>
+  <!-- inject:js -->
+  <script src="/node_modules/zone.js/dist/zone.js"></script>
+  <script src="/node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="/node_modules/es6-shim/es6-shim.js"></script>
+  <script src="/node_modules/tslib/tslib.js"></script>
+  <script src="/node_modules/systemjs/dist/system.js"></script>
+  <script src="/systemjs-config.js"></script>
+  <!-- endinject -->
+
+  <!-- dev -->
     <script>
         System.import('external-libs/imports').then(function () {
             System.import('app/main');
@@ -27,13 +32,6 @@
   <!-- end-dev -->
 
   <!-- prod --
-  
-    <script>
-        var module = {};
-    </script>
-    <script src="app/common.min.js"></script>
-    <script src="app/app.min.js"></script>
-
-   -- end-prod -->
+  -- end-prod -->
 </body>
 </html>

@@ -6,10 +6,10 @@ gulp.task("build-dev", function(){
     return api.sync(
         () => api.dev.prepareImportModules(vars),
         () => api.async(
-            () => api.dev.prepareIncludeScripts(vars),
-            () => api.dev.processStyles(vars),
-            () => api.dev.processScripts(vars)
-        )
+            () => api.dev.compileScss(vars),
+            () => api.dev.compileTypescript(vars)
+        ),
+        () => api.dev.injectScripts(vars)
     );
 });
 
@@ -22,14 +22,15 @@ gulp.task("build-prod", function(){
         () => api.prod.clean(vars),
         () => api.async(
             () => api.prod.makeCommonBundle(vars),
+            () => api.prod.copyAssetsToDist(vars),
             () => api.sync(                
-                () => api.prod.processStyles(vars),
+                () => api.prod.compileScss(vars),
                 () => api.prod.processAngularTemplates(vars),
-                () => api.prod.processScripts(vars),
+                () => api.prod.compileTypescript(vars),
                 () => api.prod.makeAppBundle(vars)
             )
         ),
-        () => api.prod.publishToDist(vars)
+        () => api.prod.processIndexHtml(vars)
     );
 });
 
